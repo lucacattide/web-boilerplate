@@ -1,6 +1,13 @@
-# URLS
 RewriteEngine On 
+
+#SSL
+#RewriteCond %{HTTPS} off
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# URLS
 RewriteRule ^/?$ index.php [L]
+#RewriteRule ^privacy/?$ index.php?pag=privacy [L]
+
 
 # Content Security Policy
-Header set Content-Security-Policy-Report-Only "default-src 'none'; script-src 'self' code.jquery.com 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' www.googletagmanager.com 'unsafe-inline'; font-src 'self'; form-action 'self'; report-uri /csp_report;"
+Header set Content-Security-Policy-Report-Only "default-src 'none'; script-src 'self' code.jquery.com cdnjs.cloudflare.com www.googletagmanager.com www.google-analytics.com 'unsafe-inline'; style-src 'self' fonts.googleapis.com cdnjs.cloudflare.com 'unsafe-inline'; img-src 'self' www.google-analytics.com data:; connect-src 'self' localhost www.googletagmanager.com cdnjs.cloudflare.com 'unsafe-inline'; font-src 'self' fonts.googleapis.com; form-action 'self'; report-uri /csp_report;"
