@@ -1,7 +1,21 @@
 # Repository - Configurazione
 
+/config/
+/lib/
 /log/
+/js/*
+!/js/*/
 /node_modules/
+/sass/
+/_.browserlistrc
+/.*
+/*.json
 /.editorconfig
+/config.rb
+/Capfile
+/Gemfile
 /Gemfile.lock
+/gulpfile.js
 /package-lock.json
+/postcss.config.js
+/webpack.*.js
