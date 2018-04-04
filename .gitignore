@@ -5,3 +5,4 @@
 /.editorconfig
 /Gemfile.lock
 /package-lock.json
+.vscode
