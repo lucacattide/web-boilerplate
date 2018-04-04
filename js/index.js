@@ -12,5 +12,5 @@ import Modernizr from 'modernizr';
  */
 
 // Main
-$('document').ready(() => {
+$(document).ready(() => {
 })
