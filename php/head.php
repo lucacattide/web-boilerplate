@@ -5,8 +5,8 @@
 <!--Fine Meta Tags-->
 <!--Inizio Preload-->
 <link rel="preload" href="../css/dist/main.css" as="style">
-<link rel="preload" href="//code.jquery.com/jquery-3.3.1.min.js" as="script"></script>
-<link rel="preload" href="bundle.js" as="script"></script>
+<link rel="preload" href="//code.jquery.com/jquery-3.3.1.min.js" as="script">
+<link rel="preload" href="bundle.js" as="script">
 <?php 
   $path = $_SERVER['REQUEST_URI'];
 
