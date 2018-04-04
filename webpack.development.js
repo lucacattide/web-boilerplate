@@ -48,7 +48,9 @@ module.exports = {
         fn: function(event, file) {
           if (event === 'change') {
             const bs = require('browser-sync').get('bs-webpack-plugin');
-            bs.reload();
+            bs.reload({
+              stream: true,
+            });
           }
         },
       }],
