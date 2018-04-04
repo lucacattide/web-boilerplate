@@ -6,7 +6,6 @@
 <!--Inizio Preload-->
 <link rel="preload" href="../css/dist/main.css" as="style">
 <link rel="preload" href="//code.jquery.com/jquery-3.3.1.min.js" as="script">
-<link rel="preload" href="bundle.js" as="script">
 <?php 
   $path = $_SERVER['REQUEST_URI'];
 
@@ -17,7 +16,6 @@
 <?php endif; ?>
 <!--Fine Preload-->
 <!--Inizio Importazione Stili--> 
-<link rel="stylesheet dns-prefetch" href="../css/dist/main.css">
 <link rel="stylesheet dns-prefetch" href="../css/dist/home.css">
 <!--Fine Importazione Stili-->
 <link rel="icon dns-prefetch" type="image/png" href="../favicon.png">
