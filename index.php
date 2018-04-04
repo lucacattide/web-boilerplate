@@ -9,4 +9,6 @@
   <?php include "php/footer.php"; ?>
   <!--Fine Container-->
 </div>
+<?php include "php/torna-su.php"; ?>
+<?php include "php/cookies.php"; ?>
 <?php include "php/scripts.php"; ?>
