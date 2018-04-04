@@ -3,12 +3,13 @@
 /config/
 /lib/
 /log/
-/js/**/*
 !/js/lib/*
 !/js/dist/*
+/js/**/*
 /node_modules/
 /sass/
 /_.browserlistrc
+!/.gitignore
 /.*
 /*.json
 /.editorconfig
