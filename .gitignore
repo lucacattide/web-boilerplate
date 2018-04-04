@@ -3,8 +3,9 @@
 /config/
 /lib/
 /log/
-/js/*
-!/js/*/
+/js/**/*
+!/js/lib/*
+!/js/dist/*
 /node_modules/
 /sass/
 /_.browserlistrc
