@@ -22,13 +22,15 @@
 <?php 
   $path = $_SERVER['REQUEST_URI'];
 
-  if (strpos($path, 'home') !== false || strpos($path, '/') !== false) : ?> 
+  if (strlen(str_replace('/', '', $path)) == 0 || strpos($path, 'home') !== false) : ?>
     <link rel="preload" href="../css/dist/home.css" as="style">
-    <link rel="preload" href="//cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js" as="script">
     <link rel="preload" href="home.js" as="script">
 <?php endif; ?>
 <!--Fine Preload-->
-<!--Inizio Importazione Stili--> 
-<link rel="stylesheet dns-prefetch" href="../css/dist/home.css">
+<!--Inizio Importazione Stili-->
+<?php
+  if (strlen(str_replace('/', '', $path)) == 0 || strpos($path, 'home') !== false) : ?>
+    <link rel="stylesheet dns-prefetch" href="../css/dist/home.css">
+<?php endif; ?>
 <!--Fine Importazione Stili-->
 <link rel="icon dns-prefetch" type="image/png" href="../favicon.png">

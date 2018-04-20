@@ -8,6 +8,6 @@
 <?php 
   $path = $_SERVER['REQUEST_URI'];
 
-  if (strpos($path, 'home') !== false || strpos($path, '/') !== false) : ?> 
+  if (strlen(str_replace('/', '', $path)) == 0 || strpos($path, 'home') !== false) : ?>
     <script async defer src="home.js"></script>
 <?php endif; ?>
