@@ -4,7 +4,6 @@
 <![endif]-->
 <script src="//code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
-<script async defer src="js/dist/cookies.js"></script>
 <?php 
   $path = $_SERVER['REQUEST_URI'];
 
