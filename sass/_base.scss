@@ -78,8 +78,8 @@ input:focus,
 
 // Pulsanti
 input[type='submit'] {
-  appearance: none;
-  border-radius: 0;
+  appearance: none !important;
+  border-radius: 0 !important;
 }
 
 // Layout
