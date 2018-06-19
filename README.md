@@ -7,7 +7,7 @@
 ### Web Design & Development
 [Luca Cattide](@lucacattide)
 
-<l.cattide@email.it> (https://lucacattide.it)
+<info@lucacattide.it> (https://lucacattide.it)
 
 
 ## 1) FAQ
@@ -53,6 +53,8 @@ Questo applicativo utilizza i cookies e/o identificatori anonimi per gestire var
 1. Identificatori tecnici - finalizzati al coordinamento funzionale del sistema
 	* Navigazione
 		* Informative: pubblicizzazione selettiva di bollettini tecnici e di natura legale – Cookies;
+    * Comunicazione
+        * Notifiche: avvisi e bollettini tecnici destinati all'amministrazione ed all'utenza - sulla natura tecnica della comunicazione in oggetto del modulo - attraverso identificazione sensibile dei soggetti responsabili;
 2. Piattaforme di terze parti - di proprietà di soggetti esterni alla titolarità del Sito
 	* Raccolta dati sul traffico:
         * Google^!: collezionamento anonimo destinato all'analisi ed alla pubblicazione dei contenuti, per la comprensione dell'andamento del Sito;

@@ -152,7 +152,7 @@ export default function gestisciCookies() {
 			ck('cookie_law_stack', 'accettata');
 
 			// Invio notifica
-			$.post($(this).attr('href') +'notificacookies');
+			$.post('/php/cookies-notifica.php');
 		  }
 
 		  // Cookies terze parti
