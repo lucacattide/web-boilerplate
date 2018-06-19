@@ -76,6 +76,12 @@ input:focus,
   outline: none !important;
 }
 
+// Pulsanti
+input[type='submit'] {
+  appearance: none;
+  border-radius: 0;
+}
+
 // Layout
 .bloccato {
 	overflow: hidden !important;
