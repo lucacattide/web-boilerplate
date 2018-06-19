@@ -7,7 +7,7 @@
 ### Web Design & Development
 [Luca Cattide](@lucacattide)
 
-E-MAIL (URL)
+<l.cattide@email.it> (https://lucacattide.it)
 
 
 ## 1) FAQ
