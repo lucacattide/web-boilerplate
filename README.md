@@ -1,6 +1,6 @@
 # [Boilerplate] Web
 
-[![GitHub release](https://img.shields.io/badge/Release-1.9-lightgrey.svg)](https://github.com/lucacattide/web-boilerplate/releases/tag/1.9)
+[![GitHub release](https://img.shields.io/badge/Release-2.0-lightgrey.svg)](https://github.com/lucacattide/web-boilerplate/releases/tag/2.0)
 [![GitHub contributors](https://img.shields.io/badge/Contributors-1-lightgrey.svg)](https://github.com/lucacattide/web-boilerplate/graphs/contributors)
 
 ## Team
