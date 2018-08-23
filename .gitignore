@@ -16,7 +16,6 @@
 /config.rb
 /Capfile
 /Gemfile
-/Gemfile.lock
 /gulpfile.js
 /package-lock.json
 /postcss.config.js
