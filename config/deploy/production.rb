@@ -73,7 +73,7 @@ namespace :deploy do
 		  execute :rm, "-rf", public_html_path, "&&", :ln, "-s", current_path, public_html_path
 
 		  within current_path do
-			  execute :cp, "-rf", "#{public_html_path}/dist/index.php", public_html_path
+			  execute :cp, "-rf", "#{public_html_path}/dist/*.php", public_html_path
 			  execute :cp, "-rf", "#{public_html_path}/php/dist/php/*.php", "#{public_html_path}/php"
 			  execute :rm, "-rf", "#{public_html_path}/dist"
 			  execute :rm, "-rf", "#{public_html_path}/php/dist"
