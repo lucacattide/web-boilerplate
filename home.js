@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./js/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -110,6 +110,18 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 
 /***/ }),
 
+/***/ "./js/home.js":
+/*!********************!*\
+  !*** ./js/home.js ***!
+  \********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval(" // Importazione SASS\n\n__webpack_require__(/*! ../sass/index.scss */ \"./sass/index.scss\");\n\n__webpack_require__(/*! ../sass/home.scss */ \"./sass/home.scss\");\n\nvar _jquery = __webpack_require__(/*! jquery */ \"jquery\");\n\nvar _jquery2 = _interopRequireDefault(_jquery);\n\nvar _modernizr = __webpack_require__(/*! modernizr */ \"./.modernizrrc.js\");\n\nvar _modernizr2 = _interopRequireDefault(_modernizr);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n// Importazione Librerie\n\n/**\n * if (!Modernizr.pointerevents && !Modernizr.touchevents) {\n *   // ...\n * }\n */\n// Main\n(0, _jquery2.default)(document).ready(function () {});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9qcy9ob21lLmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vanMvaG9tZS5qcz8zZDI4Il0sInNvdXJjZXNDb250ZW50IjpbIid1c2Ugc3RyaWN0JztcblxuLy8gSW1wb3J0YXppb25lIFNBU1NcbmltcG9ydCAnLi4vc2Fzcy9pbmRleC5zY3NzJztcbmltcG9ydCAnLi4vc2Fzcy9ob21lLnNjc3MnO1xuLy8gSW1wb3J0YXppb25lIExpYnJlcmllXG5pbXBvcnQgJCBmcm9tICdqcXVlcnknO1xuaW1wb3J0IE1vZGVybml6ciBmcm9tICdtb2Rlcm5penInO1xuLyoqXG4gKiBpZiAoIU1vZGVybml6ci5wb2ludGVyZXZlbnRzICYmICFNb2Rlcm5penIudG91Y2hldmVudHMpIHtcbiAqICAgLy8gLi4uXG4gKiB9XG4gKi9cblxuLy8gTWFpblxuJChkb2N1bWVudCkucmVhZHkoKCkgPT4ge1xufSk7Il0sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBRUE7QUFDQTtBQUFBO0FBQ0E7QUFDQTtBQUNBOzs7QUFBQTtBQUNBOzs7OztBQUhBO0FBQ0E7QUFFQTs7Ozs7QUFNQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./js/home.js\n");
+
+/***/ }),
+
 /***/ "./js/index.js":
 /*!*********************!*\
   !*** ./js/index.js ***!
@@ -134,6 +146,17 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 
 /***/ }),
 
+/***/ "./sass/home.scss":
+/*!************************!*\
+  !*** ./sass/home.scss ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// removed by extract-text-webpack-plugin//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zYXNzL2hvbWUuc2Nzcy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3Nhc3MvaG9tZS5zY3NzP2U2MWUiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gcmVtb3ZlZCBieSBleHRyYWN0LXRleHQtd2VicGFjay1wbHVnaW4iXSwibWFwcGluZ3MiOiJBQUFBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./sass/home.scss\n");
+
+/***/ }),
+
 /***/ "./sass/index.scss":
 /*!*************************!*\
   !*** ./sass/index.scss ***!
@@ -142,6 +165,19 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 /***/ (function(module, exports) {
 
 eval("// removed by extract-text-webpack-plugin//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zYXNzL2luZGV4LnNjc3MuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zYXNzL2luZGV4LnNjc3M/MDAyMiJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyByZW1vdmVkIGJ5IGV4dHJhY3QtdGV4dC13ZWJwYWNrLXBsdWdpbiJdLCJtYXBwaW5ncyI6IkFBQUEiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./sass/index.scss\n");
+
+/***/ }),
+
+/***/ 0:
+/*!****************************************!*\
+  !*** multi ./js/index.js ./js/home.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ./js/index.js */"./js/index.js");
+module.exports = __webpack_require__(/*! ./js/home.js */"./js/home.js");
+
 
 /***/ }),
 
