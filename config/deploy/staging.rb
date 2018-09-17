@@ -33,12 +33,12 @@
 # Feel free to add new variables to customise your setup.
 
 set :branch, 'staging'
-set :deploy_to, "/home/bhp2/test"
-set :tmp_dir, "/home/bhp2/tmp/test"
+set :deploy_to, "/home//"
+set :tmp_dir, "/home//tmp/"
 # Document Root Link
-set :public_html_path, '/home/bhp2/test.bhp2.it'
-set :dump_path, '/home/bhp2/test.bhp2.it/_db'
-set :capistrano_path, '/home/bhp2/test'
+set :public_html_path, '/home/bhp2/'
+set :dump_path, '/home/bhp2//_db'
+set :capistrano_path, '/home/bhp2/'
 
 # Definizione Timing Esecuzione
 after "deploy:symlink:release", "deploy:symlink:release_public_html"
@@ -54,9 +54,9 @@ namespace :deploy do
 				public_html_path = "#{fetch(:public_html_path)}"
 				capistrano_path = "#{fetch(:capistrano_path)}"
 				dump_path = "#{fetch(:dump_path)}"
-				db = 'bhp2_test'
-				db_user = 'bhp2_test'
-				db_password = 'passwordtest'
+				db = ''
+				db_user = ''
+				db_password = ''
 
 				# Ridefinisci il symlink
 				execute :rm, "-rf", public_html_path, "&&", :ln, "-s", current_path, public_html_path
@@ -65,9 +65,9 @@ namespace :deploy do
 					# Controllo Path
 					# Se esiste elimina/copia
 					if Dir.exist?(dump_path)
-						execute :rm, "-rf", dump_path + "/*", "&&", :mysqldump, "-u", db_user, "-p#{db_password}", db, ">", dump_path + "/test.sql"
+						execute :rm, "-rf", dump_path + "/*", "&&", :mysqldump, "-u", db_user, "-p#{db_password}", db, ">", dump_path + "/.sql"
 					else #altrimenti crea/copia
-						execute :mkdir, "-p", dump_path, "&&", :mysqldump, "-u", db_user, "-p#{db_password}", db, ">", dump_path + "/test.sql"
+						execute :mkdir, "-p", dump_path, "&&", :mysqldump, "-u", db_user, "-p#{db_password}", db, ">", dump_path + "/.sql"
 					end
 
 					# Copia i sorgenti ottimizzati nelle path di destinazione e rimuove le cartelle native
@@ -111,13 +111,13 @@ end
 #     # password: "please use keys"
 #   }
 
-server "bhp2.it",
-user: "bhp2",
+server "",
+user: "",
 roles: %w{web},
 ssh_options: {
-	user: "bhp2",
-	keys: %w(/Users/luca/.ssh/),
+	user: "",
+	keys: %w(/Users//.ssh/),
 	forward_agent: true,
 	auth_methods: %w(publickey password),
-	password: "rT5+tGr:kfW"
+	password: ""
 }
