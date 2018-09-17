@@ -33,57 +33,56 @@
 # Feel free to add new variables to customise your setup.
 
 set :branch, 'staging'
-set :deploy_to, "/capistrano"
-set :tmp_dir, "/tmp/capistrano"
+set :deploy_to, "/home/bhp2/test"
+set :tmp_dir, "/home/bhp2/tmp/test"
 # Document Root Link
-set :public_html_path, '/public_html'
-set :capistrano_path, '/capistrano'
+set :public_html_path, '/home/bhp2/test.bhp2.it'
+set :dump_path, '/home/bhp2/test.bhp2.it/_db'
+set :capistrano_path, '/home/bhp2/test'
 
 # Definizione Timing Esecuzione
-#after "deploy:started", "deploy:db:dump"
 after "deploy:symlink:release", "deploy:symlink:release_public_html"
 
 # Deploy
 namespace :deploy do
-	# DB Dump
-	namespace :db do
-		desc "DB dump and repo pushing"
-
-		task :dump do
-			on release_roles :all do
-				public_html_path = "#{fetch(:public_html_path)}"
-
-				#execute :rm, "-rf", public_html_path + "/_db/*", "&&", :mysqldump, "-u whiskyfe_mwf -ps';'qT{7+1TeBz whiskyfe_milanowhiskyfestival >", public_html_path + "/_db/whiskyfe_milanowhiskyfestival_ss_db.sql"
-
-				within public_html_path do
-					execute :git, "checkout develop", "&&", :git, "add -A", "&&", :git, 'commit -m "Capistrano DB Dump"', "&&", :git, "push"
-				end
-			end
-		end
-	end
-	# Linking/Permessi
+	# Linking/DB Dumping/Permessi
 	namespace :symlink do
 	  desc "Symlink release to current - assets and project permissions changing"
 
 	  task :release_public_html do
-		on release_roles :all do
-		  public_html_path = "#{fetch(:public_html_path)}"
-		  capistrano_path = "#{fetch(:capistrano_path)}"
+			on release_roles :all do
+				public_html_path = "#{fetch(:public_html_path)}"
+				capistrano_path = "#{fetch(:capistrano_path)}"
+				dump_path = "#{fetch(:dump_path)}"
+				db = 'bhp2_test'
+				db_user = 'bhp2_test'
+				db_password = 'passwordtest'
 
-		  execute :rm, "-rf", public_html_path, "&&", :ln, "-s", current_path, public_html_path
+				# Ridefinisci il symlink
+				execute :rm, "-rf", public_html_path, "&&", :ln, "-s", current_path, public_html_path
 
-		  within current_path do
-			execute :cp, "-rf", "#{public_html_path}/dist/*.php", public_html_path
-			execute :cp, "-rf", "#{public_html_path}/php/dist/php/*.php", "#{public_html_path}/php"
-			execute :rm, "-rf", "#{public_html_path}/dist"
-			execute :rm, "-rf", "#{public_html_path}/php/dist"
-			execute :find, ". -type d -exec chmod 755 '{}' ';'"
-			execute :find, ". -type f -exec chmod 644 '{}' ';'"
-		end
-		end
+				within current_path do
+					# Controllo Path
+					# Se esiste elimina/copia
+					if Dir.exist?(dump_path)
+						execute :rm, "-rf", dump_path + "/*", "&&", :mysqldump, "-u", db_user, "-p#{db_password}", db, ">", dump_path + "/test.sql"
+					else #altrimenti crea/copia
+						execute :mkdir, "-p", dump_path, "&&", :mysqldump, "-u", db_user, "-p#{db_password}", db, ">", dump_path + "/test.sql"
+					end
+
+					# Copia i sorgenti ottimizzati nelle path di destinazione e rimuove le cartelle native
+					execute :cp, "-rf", "#{public_html_path}/dist/*.php", public_html_path
+					execute :cp, "-rf", "#{public_html_path}/php/dist/php/*.php", "#{public_html_path}/php"
+					execute :rm, "-rf", "#{public_html_path}/dist"
+					execute :rm, "-rf", "#{public_html_path}/php/dist"
+					# Modifica permessi
+					execute :find, ". -type d -exec chmod 755 '{}' ';'"
+					execute :find, ". -type f -exec chmod 644 '{}' ';'"
+				end
+			end
 	  end
 	end
-  end
+end
 
 # Custom SSH Options
 # ==================
@@ -112,13 +111,13 @@ namespace :deploy do
 #     # password: "please use keys"
 #   }
 
-server "",
-user: "",
+server "bhp2.it",
+user: "bhp2",
 roles: %w{web},
 ssh_options: {
-	user: "",
-	keys: %w(/Users//.ssh/),
+	user: "bhp2",
+	keys: %w(/Users/luca/.ssh/),
 	forward_agent: true,
 	auth_methods: %w(publickey password),
-	password: ""
+	password: "rT5+tGr:kfW"
 }
