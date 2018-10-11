@@ -4,22 +4,22 @@
 <title></title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
-<meta property="og:url" content="" />
-<meta property="og:type" content="" />
-<meta property="og:title" content="" />
-<meta property="og:description" content="" />
-<meta property="og:image" content="" />
-<meta property="og:audio" content="" />
-<meta property="og:video" content="" />
-<meta property="og:locale" content="it_IT" />
-<meta property="og:locale:alternate" content="" />
-<meta property="og:type" content="" />
-<meta property="og:site_name" content="" />
+<meta name="og:url" property="og:url" content="" />
+<meta name="og:type" content="" />
+<meta name="og:type" property="og:title" content="" />
+<meta name="og:description" property="og:description" content="" />
+<meta name="og:image" property="og:image" content="" />
+<meta name="og:audio" property="og:audio" content="" />
+<meta name="og:video" property="og:video" content="" />
+<meta name="og:locale" property="og:locale" content="it_IT" />
+<meta name="og:locale:alternate" property="og:locale:alternate" content="" />
+<meta name="og:type" property="og:type" content="" />
+<meta name="og:site_name" property="og:site_name" content="" />
 <!--Fine Meta Tags-->
 <!--Inizio Preload-->
 <link rel="preload" href="../css/dist/main.css" as="style">
 <link rel="preload" href="//code.jquery.com/jquery-3.3.1.min.js" as="script">
-<?php 
+<?php
   $path = $_SERVER['REQUEST_URI'];
 
   if (strlen(str_replace('/', '', $path)) == 0 || strpos($path, 'home') !== false) : ?>
