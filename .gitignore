@@ -13,6 +13,7 @@
 /.*
 /*.json
 /.editorconfig
+/.vscode
 /config.rb
 /Capfile
 /Gemfile
