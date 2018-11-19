@@ -1,8 +1,8 @@
 # config valid only for current version of Capistrano
 lock "3.11"
 
-set :application, "test"
-set :repo_url, "git@gitlab.greylab.it:greylab/landing-web-sem.git"
+set :application, ""
+set :repo_url, ""
 set :git
 # Evita il clone ad ogni deploy (sostituisce con pull)
 set :deploy_via, :remote_cache
