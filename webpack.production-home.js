@@ -13,7 +13,7 @@ const HtmlMinifierPlugin = require('html-minifier-webpack-plugin');
 // Esportazione modulo
 module.exports = merge(commonConfig, homeConfig, {
   module: {
-    loaders: [{
+    rules: [{
         // HTML
         test: /\/html\/dist\/\.html$/,
         loaders: [
