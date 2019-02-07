@@ -5,7 +5,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const WebpackBundleSizeAnalyzerPlugin = require('webpack-bundle-size-analyzer')
-  .WebpackBundleSizeAnalyzerPlugin;
+    .WebpackBundleSizeAnalyzerPlugin;
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 // Esportazione modulo
@@ -56,8 +56,4 @@ module.exports = {
       }],
     }),
   ],
-  externals: {
-    // jQuery
-    jquery: 'jQuery',
-  },
 };
