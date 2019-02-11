@@ -1,13 +1,13 @@
 # Repository - Configurazione
 
-/config/
-/lib/
-/log/
+/config
+/lib
+/log
 /js/**/*
-!/js/lib/
-!/js/dist/
-/node_modules/
-/sass/
+!/js/lib
+!/js/dist
+/node_modules
+/sass
 /_.browserlistrc
 !/.gitignore
 /.*
