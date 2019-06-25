@@ -1,10 +1,10 @@
-// Inizio Modulo
+// Module Start
 /**
- * Funzione gestione UX Torna Su
+ * Back to top management
  * Setter
  * @export
  */
-export default function inizializzaTornaSu() {
+export default function setBackToTop() {
   $(window).on('scroll', function() {
     if ($(this).scrollTop() > 0) {
       $('.torna-su').removeClass('occulta');
@@ -24,4 +24,4 @@ export default function inizializzaTornaSu() {
     }, 'fast');
   });
 }
-// Fine Modulo
+// Module End

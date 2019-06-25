@@ -1,6 +1,6 @@
-// Inizio SCSS
-// Torna Su
-.torna-su {
+// SCSS Start
+// Back to top
+.back-to-top {
 
   /* @extend %centro;
     @extend %font; */
@@ -20,7 +20,7 @@
     cursor: pointer;
   }
 
-  &.solleva {
+  &.rise {
     bottom: 4em !important;
 
     @media ($media-desktop) {
@@ -29,4 +29,4 @@
   }
 }
 
-// Fine SCSS
+// SCSS End

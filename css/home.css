@@ -12,32 +12,29 @@ input[type='submit'] {
           appearance: none !important;
   border-radius: 0 !important; }
 
-.bloccato {
+.blocked {
   overflow: hidden !important; }
 
 .clear {
   clear: both; }
 
-.disabilita {
+.disable {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none; }
 
-.disattiva {
+.deactivate {
   pointer-events: none; }
 
 mark {
   background-color: transparent !important;
   padding: 0 !important; }
 
-.nascondi {
+.hidden {
   display: none !important; }
 
-.no-padding {
-  padding: 0; }
-
-.occulta {
+.occult {
   opacity: 0 !important; }
 
 html {
@@ -77,11 +74,25 @@ html {
       display: none; }
 
 /* Inizio Browser Hacks */
+/* Internet Explorer */
+@media all and (-ms-high-contrast: none) {
+  /* IE11 */
+  /* Footer */
+  *::-ms-backdrop,
+  .footer {
+    -ms-flex-negative: 0;
+        flex-shrink: 0; }
+  /* IE10 */
+  /* Footer */
+  .footer {
+    -ms-flex-negative: 0;
+        flex-shrink: 0; } }
+
 /* Fine Browser Hacks */
 /* PATH: '../fonts/<nomefile>' *//* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+ * <link href='/stylesheets/screen.css' media='screen, projection' rel='stylesheet' type='text/css' /> */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -129,7 +140,7 @@ a img {
 elements-of-type(html5-block) {
   display: block; }
 
-.cookies__corpo {
+.cookies__body {
   text-align: center; }
 
 a {
@@ -146,32 +157,29 @@ input[type='submit'] {
           appearance: none !important;
   border-radius: 0 !important; }
 
-.bloccato {
+.blocked {
   overflow: hidden !important; }
 
 .clear {
   clear: both; }
 
-.disabilita {
+.disable {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none; }
 
-.disattiva {
+.deactivate {
   pointer-events: none; }
 
 mark {
   background-color: transparent !important;
   padding: 0 !important; }
 
-.nascondi {
+.hidden {
   display: none !important; }
 
-.no-padding {
-  padding: 0; }
-
-.occulta {
+.occult {
   opacity: 0 !important; }
 
 html {
@@ -223,9 +231,9 @@ html {
   right: 0;
   top: 0;
   z-index: 9999; }
-  .cookies.aperto {
+  .cookies.opened {
     bottom: 0 !important; }
-  .cookies.chiuso {
+  .cookies.closed {
     -webkit-box-align: start !important;
         -ms-flex-align: start !important;
             align-items: flex-start !important;
@@ -234,25 +242,34 @@ html {
     max-width: 50%;
     padding: 0 !important;
     top: auto !important; }
-    .cookies.chiuso.mobile {
+    .cookies.closed.mobile {
       bottom: 0 !important; }
     @media (min-width: 576px) {
-      .cookies.chiuso {
+      .cookies.closed {
         bottom: 6.2em !important; } }
     @media (min-width: 768px) {
-      .cookies.chiuso {
+      .cookies.closed {
         bottom: 5.7em !important; } }
     @media (min-width: 992px) {
-      .cookies.chiuso {
+      .cookies.closed {
         bottom: 3.7em !important; } }
-  .cookies, .cookies__container, .cookies__corpo__chiudi, .cookies__corpo__link, .cookies__form__etichetta__checkbox {
+  .cookies, .cookies__container,
+  .cookies .body__close,
+  .cookies .body__link,
+  .cookies .label__checkbox {
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out; }
-  .cookies__corpo, .cookies__corpo__chiudi, .cookies__corpo__link, .cookies__form__etichetta {
+  .cookies .body,
+  .cookies .body__close,
+  .cookies .body__link,
+  .cookies .form__label {
     /* color: $bianco; */ }
-  .cookies__corpo, .cookies__corpo__chiudi, .cookies__form__etichetta {
+  .cookies .body,
+  .cookies .body__close,
+  .cookies .form__label {
     /* @extend %font-light; */ }
-  .cookies__corpo, .cookies__cta, .cookies__form__etichetta {
+  .cookies .body, .cookies__cta,
+  .cookies .form__label {
     /* font-size: $font-size-footer; */ }
   .cookies, .cookies__form {
     display: -webkit-box;
@@ -265,27 +282,28 @@ html {
   .cookies__container {
     padding: 0 0 1em;
     width: 100%; }
-    .cookies__container.aperto {
+    .cookies__container.opened {
       height: 100%;
       text-align: center !important; }
-  .cookies__corpo {
+  .cookies__body {
     /* line-height: $interlinea-footer; */
     margin: 0 auto 2em;
     width: 88%; }
-    .cookies__corpo__chiudi:hover, .cookies__corpo__link:hover {
+    .cookies__body .body__close:hover,
+    .cookies__body .body__link:hover {
       opacity: .7; }
-    .cookies__corpo__chiudi {
+    .cookies__body .body__close {
       /* font-size: $font-size-menu; */
       position: absolute; }
-      .cookies__corpo__chiudi:hover {
+      .cookies__body .body__close:hover {
         cursor: pointer; }
-    .cookies__corpo__chiudi--avviso {
+    .cookies__body .body__close--notification {
       right: 16px;
       top: 16px; }
-    .cookies__corpo__chiudi--impostazioni {
+    .cookies__body .body__close--settings {
       right: 0;
       top: 0; }
-    .cookies__corpo__link {
+    .cookies__body .body__link {
       /* @extend %font-bold; */ }
   .cookies__cta {
     /* @extend %cta-1;
@@ -293,10 +311,10 @@ html {
     background-color: $bianco;
     color: $blu;*/
     padding: .5em 16px; }
-    .cookies__cta.aperto {
+    .cookies__cta.opened {
       margin: 2em 16px; }
       @media (min-width: 576px) {
-        .cookies__cta.aperto {
+        .cookies__cta.opened {
           margin: 0 16px; } }
   .cookies__form {
     margin: 0 auto 1em;
@@ -314,17 +332,20 @@ html {
     @media (min-width: 1920px) {
       .cookies__form {
         max-width: 24%; } }
-    .cookies__form__etichetta {
+    .cookies__form__label {
       margin: 0 0 1em;
       position: relative;
       text-indent: 32px; }
-      .cookies__form__etichetta:hover .cookies__form__etichetta__checkbox {
+      .cookies__form__label:hover .cookies__form__label__checkbox {
         /* box-shadow: 0 0 0 2px $bianco; */ }
-      .cookies__form__etichetta, .cookies__form__etichetta__checkbox {
+      .cookies__form__label,
+      .cookies__form__label .label__checkbox {
         cursor: pointer; }
-      .cookies__form__etichetta__campo, .cookies__form__etichetta__checkbox, .cookies__form__etichetta__checkbox::after {
+      .cookies__form__label .label__field,
+      .cookies__form__label .label__checkbox,
+      .cookies__form__label .label__checkbox::after {
         position: absolute; }
-      .cookies__form__etichetta__campo {
+      .cookies__form__label .label__field {
         -webkit-appearance: none;
            -moz-appearance: none;
                 appearance: none;
@@ -346,27 +367,27 @@ html {
         &:-moz-placeholder {
           color: $grigio-2;
         } */ }
-        .cookies__form__etichetta__campo:focus, .cookies__form__etichetta__campo:hover {
+        .cookies__form__label .label__field:focus, .cookies__form__label .label__field:hover {
           /* box-shadow: 0 0 0 2px $grigio; */ }
-      .cookies__form__etichetta__campo:checked + .cookies__form__etichetta__checkbox {
+      .cookies__form__label .label__field:checked + .label__checkbox {
         /* background-color: $celeste; */ }
-      .cookies__form__etichetta__checkbox {
+      .cookies__form__label .label__checkbox {
         /* background-color: $bianco; */
         height: 12px;
         left: 0;
         top: 0;
         width: 12px; }
-    .cookies__form__legenda {
+    .cookies__form__legend {
       display: none; }
-  .cookies--impostazioni {
+  .cookies--settings {
     overflow-x: hidden;
     overflow-y: auto; }
-    .cookies--impostazioni::-webkit-scrollbar, .cookies--impostazioni::-webkit-scrollbar-track, .cookies--impostazioni::-webkit-scrollbar-track-piece, .cookies--impostazioni::-webkit-scrollbar-corner, .cookies--impostazioni::-webkit-resizer {
+    .cookies--settings::-webkit-scrollbar, .cookies--settings::-webkit-scrollbar-track, .cookies--settings::-webkit-scrollbar-track-piece, .cookies--settings::-webkit-scrollbar-corner, .cookies--settings::-webkit-resizer {
       /* background-color: $bianco; */ }
-    .cookies--impostazioni::-webkit-scrollbar-button, .cookies--impostazioni::-webkit-scrollbar-thumb {
+    .cookies--settings::-webkit-scrollbar-button, .cookies--settings::-webkit-scrollbar-thumb {
       /* background-color: $blu; */ }
 
-.torna-su {
+.back-to-top {
   /* @extend %centro;
     @extend %font; */
   bottom: 0;
@@ -376,12 +397,12 @@ html {
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
   z-index: 8000; }
-  .torna-su:hover {
+  .back-to-top:hover {
     cursor: pointer; }
-  .torna-su.solleva {
+  .back-to-top.rise {
     bottom: 4em !important; }
     @media (min-width: 992px) {
-      .torna-su.solleva {
+      .back-to-top.rise {
         bottom: 2.6em !important; } }
 
 /* Inizio Browser Hacks */

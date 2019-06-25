@@ -1,16 +1,22 @@
-<!-- respond.js per IE8 -->
+<!--JS Start-->
+<!-- respond.js for IE8 -->
 <!--[if lt IE 9]>
-  <script src="js/lib/respond.min.js"></script>
+  <script src="/js/lib/respond.min.js"></script>
 <![endif]-->
-<script src="//code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-<?php 
+<script src="//code.jquery.com/jquery-3.4.1.min.js"
+integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+crossorigin="anonymous"></script>
+<?php
   $path = $_SERVER['REQUEST_URI'];
 
   if (strlen(str_replace('/', '', $path)) == 0 || strpos($path, 'home') !== false) : ?>
-    <script async defer src="home.js"></script>
+    <!--TODO: Prefix in production must be changed to "../js/dist/"-->
+    <script async defer src="../js/home.js"></script>
 <?php endif; ?>
-<!--Inizio Rich Snippets-->
+<script async defer type="module" src="../js/refresh.js"></script>
+<script async defer src="../js/install.js"></script>
+<!--JS End-->
+<!--Rich Snippets Start-->
 <script type="application/ld+json">
 {
   "@context": "http://schema.org",
@@ -58,4 +64,4 @@
   "url": "http://"
 }
 </script>
-<!--Fine Rich Snippets-->
+<!--Rich Snippets End-->

@@ -1,20 +1,32 @@
 'use strict';
 
-// Importazione SASS
+// Module Start
+// Main
+// SASS imports
 import '../sass/index.scss';
-// Importazione Librerie
+// JS imports
 import $ from 'jquery';
-import Modernizr from 'modernizr';
-import gestisciCookies from './cookies.js';
-import inizializzaTornaSu from './torna-su.js';
-/**
- * if (!Modernizr.pointerevents && !Modernizr.touchevents) {
- *   // ...
- * }
- */
+import setCookies from './cookies.js';
+import setBackToTop from './back-to-top.js';
+
+// Service Worker
+if ('serviceWorker' in navigator) {
+  $(window).on('load', () => {
+    // TODO: In production must be set to /js/dist/service-worker-prod.js
+    navigator.serviceWorker.register('/js/service-worker-dev.js')
+    // TODO: Remove in production
+        .then((registration) => {
+          console.log(`Service Worker registered! Scope: ${registration.scope}`);
+        })
+        .catch((err) => {
+          console.log(`Service Worker registration failed: ${err}`);
+        });
+  });
+}
 
 // Main
 $(document).ready(() => {
-  gestisciCookies();
-  inizializzaTornaSu();
+  setCookies();
+  setBackToTop();
 });
+// Module End
