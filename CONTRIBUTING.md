@@ -151,10 +151,14 @@ I.e.
 
 ### Branches
 
+There are three branches, defined as:
+
 - __develop__ (Development);
 - __staging__ (Beta);
 - __master__ (Production - _Default_);
 
+Contributions implement the GitFlow framework (https://tinyurl.com/zt4vys8).
+Please read about its specifications before commit on any branch.
 
 ### Commits
 
@@ -167,7 +171,7 @@ I.e.
 I.e.
 
 ```
-	Updates: Icons updated;
+	Update: Icons updated;
 ```
 
 
@@ -175,6 +179,12 @@ I.e.
 
 - __staging__: merging from __develop__;
 - __master__: merging from __staging__;
+
+
+### Releases
+
+The releasing process follows the SemVer specification (https://semver.org/).
+Please read about its guidelines before draft any release.
 
 
 ## Host

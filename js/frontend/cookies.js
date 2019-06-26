@@ -61,7 +61,7 @@ function ak(n) {
   // Cookie check
   // If polocy hasn't been accepted
   if (c === '' && n === 'cookie_law_stack') {
-    $('.cookies__form__label__field')
+    $('.label__field')
         .each(function() {
           $(this).attr('checked', 'checked');
         });
@@ -80,7 +80,7 @@ function ak(n) {
     switch (n) {
       case 'cookie_law_stack':
         $('.cookies__cta').removeClass('opened');
-        $('.cookies__body, .cookies__form, .cookies__cta--accept, .cookies__body__close--notification')
+        $('.cookies__body, .cookies__form, .cookies__cta--accept, .body__close--notification')
             .addClass('hidden');
         $('.cookies, .cookies__container')
             .addClass('closed');
@@ -125,7 +125,7 @@ export default function setCookies() {
               .removeClass('closed');
           $('.cookies, .cookies__container, .cookies__cta, .cookies__cta--settings')
               .addClass('opened');
-          $('.cookies__body, .cookies__form, .cookies__cta--accept, .cookies__cta--opt-out, .cookies__cta--save, .cookies__body__close--notification')
+          $('.cookies__body, .cookies__form, .cookies__cta--accept, .cookies__cta--opt-out, .cookies__cta--save, .body__close--notification')
               .removeClass('hidden');
           $('.cookies--notification').removeClass('animated slideInDown')
               .addClass('hidden');
@@ -156,7 +156,7 @@ export default function setCookies() {
           }
 
           // Third-party cookies
-          $('.cookies__form__label__field')
+          $('.label__field')
               .each(function() {
                 if (l($(this).val()) === '') {
                   ck($(this).val(), 'accepted');
@@ -170,7 +170,7 @@ export default function setCookies() {
           e.preventDefault();
 
           // Cookies update
-          $('.cookies__form__label__field')
+          $('.label__field')
               .each((i, elemento) => {
                 if ($(elemento).attr('checked')) {
                   ck($(elemento).val(), 'accepted');
@@ -187,7 +187,7 @@ export default function setCookies() {
           e.preventDefault();
 
           // Cookies disabling
-          $('.cookies__form__label__field')
+          $('.label__field')
               .each((i, elemento) => {
                 $(elemento).removeAttr('checked');
 
@@ -196,14 +196,14 @@ export default function setCookies() {
               });
         });
     // Closing
-    $('.cookies__body__close--notification').on('click tap', () => {
+    $('.body__close--notification').on('click tap', () => {
       $('.cookies').addClass('animated fadeOut');
 
       setTimeout(() => {
         $('.cookies').addClass('hidden');
       }, 500);
     });
-    $('.cookies__body__close--settings')
+    $('.body__close--settings')
         .on('click tap', () => {
           $('.cookies--settings').removeClass('animated slideInDown')
               .addClass('hidden');
@@ -214,7 +214,7 @@ export default function setCookies() {
           $('.cookies__cta').addClass('opened');
         });
     // UX
-    $('.cookies__form__label__field')
+    $('.label__field')
         .on('change', function() {
           if ($(this).attr('checked')) {
             $(this).removeAttr('checked');
@@ -225,7 +225,7 @@ export default function setCookies() {
     $('.cookies__cta--accept, .cookies__cta--save')
         .on('click tap', () => {
           $('.cookies__cta, .cookies__container').removeClass('opened');
-          $('.cookies__body, .cookies__form, .cookies__cta--accept, .cookies__cta--opt-out, .cookies__cta--save, .cookies__body__close--notification')
+          $('.cookies__body, .cookies__form, .cookies__cta--accept, .cookies__cta--opt-out, .cookies__cta--save, .body__close--notification')
               .addClass('hidden');
           $('.cookies--notification').removeClass('hidden');
           $('.cookies, .cookies__container')

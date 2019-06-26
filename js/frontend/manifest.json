@@ -1,6 +1,0 @@
-{
-  "main.js": "home.js",
-  "main.css": "../css/home.css",
-  "lib/workbox/precache-manifest.50715bc53b9cb6998003972ccef02212.js": "lib/workbox/precache-manifest.50715bc53b9cb6998003972ccef02212.js",
-  "service-worker-dev.js": "service-worker-dev.js"
-}
