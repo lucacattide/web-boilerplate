@@ -22,7 +22,7 @@
   <meta name="theme-color" content="#" />
   <!--Meta Tags End-->
   <!--Preload Start-->
-  <link rel="preload" href="manifest.json" as="script">
+  <link rel="preload" href="../manifest.json" as="script">
   <link rel="preload" href="//code.jquery.com/jquery-3.4.1.min.js" as="script">
   <?php
     $path = $_SERVER['REQUEST_URI'];
@@ -30,11 +30,11 @@
     if (strlen(str_replace('/', '', $path)) == 0 || strpos($path, 'home') !== false) : ?>
       <!--TODO: CSS prefix in production must be changed to "../css/dist/"-->
       <link rel="preload" href="../css/home.css" as="style">
-      <!--TODO: JS prefix in production must be changed to "../js/dist/"-->
-      <link rel="preload" href="../js/home.js" as="script">
+      <!--TODO: JS prefix in production must be changed to "../js/frontend/dist/"-->
+      <link rel="preload" href="../js/frontend/home.js" as="script">
   <?php endif; ?>
-  <link rel="preload" href="../js/refresh.js" as="script">
-  <link rel="preload" href="../js/install.js" as="script">
+  <link rel="preload" href="../js/frontend/refresh.js" as="script">
+  <link rel="preload" href="../js/frontend/install.js" as="script">
   <!--Preload End-->
   <!--CSS Start-->
   <?php
@@ -45,6 +45,6 @@
   <!--CSS End-->
   <link rel="icon dns-prefetch" type="image/png" href="../favicon.png">
   <!--TODO: Must be 152x152 px PNG-->
-  <link rel="apple-touch-icon dns-prefetch" href="img/">
-  <link rel="manifest dns-prefetch" href="manifest.json">
+  <link rel="apple-touch-icon dns-prefetch" href="../img/">
+  <link rel="manifest dns-prefetch" href="../manifest.json">
 </head>

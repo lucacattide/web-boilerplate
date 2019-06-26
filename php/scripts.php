@@ -1,7 +1,7 @@
 <!--JS Start-->
 <!-- respond.js for IE8 -->
 <!--[if lt IE 9]>
-  <script src="/js/lib/respond.min.js"></script>
+  <script src="/js/frontend/lib/respond.min.js"></script>
 <![endif]-->
 <script src="//code.jquery.com/jquery-3.4.1.min.js"
 integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -10,11 +10,11 @@ crossorigin="anonymous"></script>
   $path = $_SERVER['REQUEST_URI'];
 
   if (strlen(str_replace('/', '', $path)) == 0 || strpos($path, 'home') !== false) : ?>
-    <!--TODO: Prefix in production must be changed to "../js/dist/"-->
-    <script async defer src="../js/home.js"></script>
+    <!--TODO: Prefix in production must be changed to "../js/frontend/dist/"-->
+    <script async defer src="../js/frontend/home.js"></script>
 <?php endif; ?>
-<script async defer type="module" src="../js/refresh.js"></script>
-<script async defer src="../js/install.js"></script>
+<script async defer type="module" src="../js/frontend/refresh.js"></script>
+<script async defer src="../js/frontend/install.js"></script>
 <!--JS End-->
 <!--Rich Snippets Start-->
 <script type="application/ld+json">

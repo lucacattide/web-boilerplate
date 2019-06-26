@@ -9,7 +9,7 @@ import {
 
 // Service Worker Check
 if ('serviceWorker' in navigator) {
-  var wb = new Workbox('/js/service-worker-dev.js');
+  var wb = new Workbox('/js/frontend/service-worker-dev.js');
 
   $(wb).on('waiting', function() {
     var prompt = createUIPrompt({

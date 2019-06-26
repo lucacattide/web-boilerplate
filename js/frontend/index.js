@@ -3,7 +3,7 @@
 // Module Start
 // Main
 // SASS imports
-import '../sass/index.scss';
+import '../../sass/index.scss';
 // JS imports
 import $ from 'jquery';
 import setCookies from './cookies.js';

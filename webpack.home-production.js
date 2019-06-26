@@ -24,12 +24,12 @@ module.exports = merge(commonConfig, {
   mode: 'production',
   // Sources
   entry: [
-    './js/index.js',
-    './js/home.js',
+    './js/frontend/index.js',
+    './js/frontend/home.js',
   ],
   output: {
     filename: 'home.js',
-    path: path.resolve(__dirname, './js/dist'),
+    path: path.resolve(__dirname, './js/frontend/dist'),
   },
   module: {
     rules: [{
@@ -110,19 +110,19 @@ module.exports = merge(commonConfig, {
     // Cleanings
     new CleanWebpackPlugin([
       './css/dist/home.css',
-      './js/dist/home.js',
+      './js/frontend/dist/home.js',
     ]),
     // PWA
     new InjectManifest({
-      swSrc: path.join('./js', 'service-worker.js'),
-      swDest: path.join('./dist', 'service-worker-prod.js'),
-      importsDirectory: './lib/workbox',
+      swSrc: path.join('./js/frontend/', 'service-worker.js'),
+      swDest: path.join('./frontend/dist', 'service-worker-prod.js'),
+      importsDirectory: './frontend/lib/workbox',
       globPatterns: [
         'css/**/*',
         'img',
-        'js/dist/home.js',
-        'js/refresh.js',
-        'js/install.js',
+        'js/frontend/dist/home.js',
+        'js/frontend/refresh.js',
+        'js/frontend/install.js',
         'php',
       ],
     }),

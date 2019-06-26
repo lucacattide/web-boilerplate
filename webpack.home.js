@@ -21,12 +21,12 @@ const {
 module.exports = merge(commonConfig, developmentConfig, {
   // Sources
   entry: [
-    './js/index.js',
-    './js/home/home.js',
+    './js/frontend/index.js',
+    './js/frontend/home/home.js',
   ],
   output: {
     filename: 'home.js',
-    path: path.resolve(__dirname, './js'),
+    path: path.resolve(__dirname, './js/frontend/'),
   },
   plugins: [
     // SASS - CSS
@@ -35,20 +35,20 @@ module.exports = merge(commonConfig, developmentConfig, {
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: [
         './css/home.css',
-        './js/home.js',
+        './js/frontend/home.js',
       ],
     }),
     // PWA
     new InjectManifest({
-      swSrc: path.join('./js', 'service-worker.js'),
+      swSrc: path.join('./js/frontend', 'service-worker.js'),
       swDest: path.join('./', 'service-worker-dev.js'),
-      importsDirectory: './lib/workbox',
+      importsDirectory: './frontend/lib/workbox',
       globPatterns: [
         'css/**/*',
         'img',
-        'js/home.js',
-        'js/refresh.js',
-        'js/install.js',
+        'js/frontend/home.js',
+        'js/frontend/refresh.js',
+        'js/frontend/install.js',
         'php',
       ],
     }),
