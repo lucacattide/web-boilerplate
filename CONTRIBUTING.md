@@ -89,7 +89,9 @@ Third-party linter plugins like ESLint, Beautify, Prettier or any other similar 
 - .gitignore (Production)
     * __!/js/frontend/install.js:__ Progressive Web App management file (_JavaScript_);
     * __!/js/frontend/refresh.js:__ Progressive Web App installation manager file (_JavaScript_);
+    * __!/js/frontend/lib/*.js:__ Front-End third-party library files (_JavaScript_);
     * __/js/frontend/*:__ Front-End development files (_JavaScript_);
+    * __/js/frontend/lib/workbox/*:__ Progressive Web App chache files (_JavaScript_);
 	* __/lib/:__ Deploy manager utility recipes (_Capistrano_);
     * __/log/:__ Various operational registries;
     * __/node_modules/:__ Full-Stack Front-End dependencies (_NodeJS_);
@@ -110,6 +112,7 @@ Third-party linter plugins like ESLint, Beautify, Prettier or any other similar 
     * __/jest.*.js:__ Unit testing plugin configuration files (_Jest_);
     * __/postcss.config.js:__ Module plugin bundler configuration files (_Webpack_);
 	* __/webpack.*.js__: Module plugin bundler configuration files (_Webpack_);
+    * __.DS_Store__: OS filesystem indexing file (_Mac OS X_);
 
 
 I.e.
@@ -119,7 +122,9 @@ I.e.
     /config/
     !/js/frontend/install.js
     !/js/frontend/refresh.js
+    !/js/frontend/lib/*
     /js/frontend/*
+    /js/frontend/lib/workbox/*
     /lib/
     /log/
     /node_modules/
@@ -140,6 +145,7 @@ I.e.
     /jest.*.js
     /postcss.config.js
     /webpack.*.js
+    .DS_Store
 ```
 
 
