@@ -8,7 +8,7 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/lucacattide/web-boilerplate.svg?style=for-the-badge)
 ![GitHub License](https://img.shields.io/github/license/lucacattide/web-boilerplate.svg?style=for-the-badge)
 [![GitHub Followers](https://img.shields.io/github/followers/lucacattide.svg?style=for-the-badge)](https://github.com/lucacattide)
-[![Stack Exchange reputation](https://img.shields.io/stackexchange/stackoverflow/r/7554217.svg?style=for-the-badge)](https://stackoverflow.com/users/7554217/luca-cattide)
+[![Stack Overflow reputation](https://img.shields.io/stackexchange/stackoverflow/r/7554217.svg?style=for-the-badge)](https://stackoverflow.com/users/7554217/luca-cattide)
 
 ## Team
 
