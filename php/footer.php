@@ -1,4 +1,4 @@
-<!--Inizio Footer-->
+<!--Footer Start-->
 <footer class="footer">
 </footer>
-<!--Fine Footer-->
+<!--Footer End-->

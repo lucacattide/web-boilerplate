@@ -1,16 +1,18 @@
 <?php include "php/doctype.php"; ?>
 <?php include "php/head.php"; ?>
 <body>
+  <!--Container Start-->
   <div class="container">
-    <!--Inizio Container-->
     <?php include "php/header.php"; ?>
+    <!--Wrapper Start-->
     <main class="container__wrapper">
-      <?php include "php/navigazione.php" ?>
+    <!--TODO: Include required sections-->
     </main>
+    <!--Wrapper End-->
     <?php include "php/footer.php"; ?>
-    <!--Fine Container-->
   </div>
-  <?php include "php/torna-su.php"; ?>
+  <!--Container End-->
+  <?php include "php/back-to-top.php"; ?>
   <?php include "php/cookies.php"; ?>
   <?php include "php/scripts.php"; ?>
 </body>
