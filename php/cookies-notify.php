@@ -2,7 +2,7 @@
   $url = (isset($_SERVER['HTTPS']) ? 'https': 'http') .'://'. $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
   $proxy = $_SERVER['HTTP_X_FORWARDED_FOR'];
   // TODO: Change with final email
-  $recipient = 'l.cattide@email.it';
+  $recipient = 'info@lucacattide.dev';
   $user = $_SERVER['REMOTE_ADDR'];
 
   // Proxy check
