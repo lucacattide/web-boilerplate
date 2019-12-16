@@ -10,8 +10,7 @@ crossorigin="anonymous"></script>
   $path = $_SERVER['REQUEST_URI'];
 
   if (strlen(str_replace('/', '', $path)) == 0 || strpos($path, 'home') !== false) : ?>
-    <!--TODO: Prefix in production must be changed to "../js/frontend/dist/"-->
-    <script async defer src="../js/frontend/home.js"></script>
+    <script async defer src="../js/frontend/dist/home.js"></script>
 <?php endif; ?>
 <script async defer type="module" src="../js/frontend/refresh.js"></script>
 <script async defer src="../js/frontend/install.js"></script>

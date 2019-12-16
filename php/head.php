@@ -28,10 +28,8 @@
     $path = $_SERVER['REQUEST_URI'];
 
     if (strlen(str_replace('/', '', $path)) == 0 || strpos($path, 'home') !== false) : ?>
-      <!--TODO: CSS prefix in production must be changed to "../css/dist/"-->
-      <link rel="preload" href="../css/home.css" as="style">
-      <!--TODO: JS prefix in production must be changed to "../js/frontend/dist/"-->
-      <link rel="preload" href="../js/frontend/home.js" as="script">
+      <link rel="preload" href="../css/disthome.css" as="style">
+      <link rel="preload" href="../js/frontend/dist/home.js" as="script">
   <?php endif; ?>
   <link rel="preload" href="../js/frontend/refresh.js" as="script">
   <link rel="preload" href="../js/frontend/install.js" as="script">
@@ -39,8 +37,7 @@
   <!--CSS Start-->
   <?php
     if (strlen(str_replace('/', '', $path)) == 0 || strpos($path, 'home') !== false) : ?>
-      <!--TODO: Prefixes in production must be changed to "../css/dist/"-->
-      <link rel="stylesheet dns-prefetch" href="../css/home.css">
+      <link rel="stylesheet dns-prefetch" href="../css/dist/home.css">
   <?php endif; ?>
   <!--CSS End-->
   <link rel="icon dns-prefetch" type="image/png" href="../favicon.png">
