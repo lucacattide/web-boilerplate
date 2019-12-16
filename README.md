@@ -16,7 +16,7 @@
 
 [Luca Cattide](@lucacattide)
 
-<info@lucacattide.it> (https://lucacattide.it)
+<info@lucacattide.dev> (https://lucacattide.dev)
 
 ## 1) FAQ
 
