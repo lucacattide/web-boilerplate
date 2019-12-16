@@ -11,6 +11,7 @@
 /sass/
 /test/
 /_.browserlistrc
+!/.github
 !/.gitignore
 !/.htaccess
 /.*
