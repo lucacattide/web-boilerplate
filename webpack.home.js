@@ -1,6 +1,4 @@
 // Webpack - Home Configuration (Development)
-'use strict';
-
 // Module Imports
 const path = require('path');
 const merge = require('webpack-merge');
