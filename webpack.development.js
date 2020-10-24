@@ -1,6 +1,4 @@
 // Webpack - Global Configuration (Development)
-'use strict';
-
 // Module Imports
 const path = require('path');
 const webpack = require('webpack');
